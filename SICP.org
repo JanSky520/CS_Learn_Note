@@ -5,9 +5,7 @@
 
 
 * 构造过程抽象
------
 ** 程序设计的基本元素
------
 1. Lisp 的代码是由一堆括号来表达的，在计算法则中运用前缀表达式
    #+begin_src emacs-lisp
      (+ 1 2)       ; 3
@@ -133,13 +131,33 @@
      (defun cube (x)
        (cube-iter x 1.0))
    #+end_src
+** 过程及其产生的计算
+1. 线性递归展开时形成递归调用链，依赖调用栈保存中间状态，最后收缩计算；线性迭代通过状态变量逐步更新结果，无调用栈累积
+   #+begin_src emacs-lisp
+     (defun fact-iter (product counter max-counter)
+       (if (> counter max-counter)
+           product
+         (fact-iter (* product counter) (+ 1 counter) max-counter)))
+     (defun factorial (n)
+       (fact-iter 1 1 n))
+   #+end_src 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 练习题答案
+   #+begin_src emacs-lisp
+     ; 练习 9
+     ; (+ 4 5) -> (inc (+ 3 5)) -> (inc (inc (+ 2 5))) -> (inc (inc (inc (+ 1 5)))) -> (inc (inc (inc (inc (+ 0 5)))))
+     ; (inc (inc (inc (inc 5)))) -> (inc (inc (inc 6))) -> (inc (inc 7)) -> (inc 8) -> 9
+     ; (+ 4 5) -> (+ 3 6) -> (+ 2 7) -> (+ 1 8) -> (+ 0 9) -> 9
+     ; 第一个是递归，第二个是迭代
 
-
-
-
-
-
-
+     ; 练习 10
+     ; 1024 65536 65536
+     ; 2n 2^n 2^(2^n)
+   #+end_src
 
 
 
