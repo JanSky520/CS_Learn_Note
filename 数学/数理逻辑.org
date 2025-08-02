@@ -1,0 +1,20 @@
+#+title:   数理逻辑
+#+author:  JanSky
+#+date:    2025-07-28
+#+STARTUP: overview indent
+
+* 命题逻辑
+** 命题表达式
+
+
+
+
+
+
+
+
+
+
+
+
+

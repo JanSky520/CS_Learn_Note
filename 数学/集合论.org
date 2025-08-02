@@ -1,0 +1,37 @@
+#+title:   集合论
+#+author:  JanSky
+#+date:    2025-07-22
+#+STARTUP: overview indent
+
+
+* 传递集合
+** 集合论语言及形式理论
++ *集合论* 一种关于无穷的纯粹数学理论，是一种关于无穷的认识的理论体系
++ *论域* 某一类数学对象的一个界定范围，关注的对象是域中的数，数是域论的一阶对象，二阶对象包括子域、域同构、多项式等
++ *公理化* 不求初始定义，但求明确，但求准确，但求用一系列的公理来有限度地表达我们对初始概念的理解或期望
+*** 集合论语言
++ *公理 1 外延公理* 两个集合 $x$ 和 $y$ 相等的定义为 $\forall x\forall y((x=y)\leftrightarrow(\forall z(z\in x\leftrightarrow z\in y)))$ 
++ *定义 1.1* 任何一个表达式都只能从 $\in、\notin、\neg、\land、\lor、\rightarrow、\leftrightarrow、\forall、\exists$ 这几个中得到
++ *定义 1.2* 变量在量词 $\forall$ 或 $\exists$ 作用范围内出现是约束的，否则是自由的
++ *定义 1.3* 表达式中每一个 $\exists y$ 或 $\forall y$ 的约束范围内都没有 $x$ 自由的出现，我们说 $y$ 可以在表达式中取代或者替换 $x$
++ *罗素定理* $\neg(\exists x\forall y(y\in x\leftrightarrow y\not\in y))$
+  证明：假设罗素定理成立，那么 $\exists x\forall y(y\in x\leftrightarrow y\not\in y)$
+        任取集合 M 满足表达式 $y \in M \leftrightarrow y \not\in y$
+        对于集合 M 来说也满足 $M \in M \leftrightarrow M \not\in M$，存在矛盾
+*** 集合论存在性公理
++ *公理 2 第一存在性* $\exists x(x=x)$ 保证我们有对象可关注，论域中有对象存在（至少有一个东西存在）
++ *公理 3 幂集公理* 任何集合的所有子集可以组成一个新的集合称为幂集，即 $\forall x \exists y \forall z (z \in y \leftrightarrow z \subseteq x)$，幂集具有唯一性
++ *公理 4 分离公理* 保证子集的存在性，具有唯一性，即 $\forall p_1 \cdots \forall p_n \forall x \exists y \forall z (z \in y \leftrightarrow (z \in x \land \phi (p_1, \cdots ,p_n,z)))$
++ *公理 5 配对公理* 给定任意两个集合，可以构造一个仅包含这两个集合的新集合，即 $\forall x \forall y \exists u \forall z (z \in u \leftrightarrow (z = x \lor z = y))$
++ *公理 6 并集公理* $\forall x \exists y \forall z (z \in y \leftrightarrow \exists u (u \in x \land z \in u))$
++ *公理 7 无穷公理* 断言了无限集合的存在性 $\exists x ((\emptyset \in x) \land (\forall u (u \in x \rightarrow S(u) \in x)))$
++ *定义 1.4* 集合 $x$ 是集合 $y$ 的一个子集合，记成 $x \subseteq y$ 即 $x \subseteq y \leftrightarrow \forall z (z \in x \rightarrow z \in y)$
++ *定义 1.5* 对给定集合 $x$ 其幂集就是由它的全体子集合所组成的集合，即 $\mathfrak{P}(x)=\{y \mid y \subseteq x \}$
++ *定义 1.6* 唯一的不合任何元素的集合被称为空集，并记成 $\emptyset$，注意 $\forall x (\emptyset \subseteq x)$
++ *定义 1.7* 集合具有无序性，元素不得重复
+** 基本概念
+*** 关系和函数
+
+
+
+
